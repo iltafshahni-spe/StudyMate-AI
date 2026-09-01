@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}
+Setup 2FA - Authenticator App
+{% endblock %}
+
+{% block content %}
+
+<div class="auth-page">
+    <div class="auth-card">
+        <div class="auth-form-side">
+            <span class="auth-label">SECURITY SETUP</span>
+
+
+        <h1>Set Up Authenticator</h1>
+
+        <p>
+            Scan this QR code with your authenticator app to set up
+            two-factor authentication.
+        </p>
+
+        <div class="qr-box">
+            <img
+                src="{{ url_for('static', filename='totp_qr.png') }}"
+                alt="Authenticator QR Code"
+            >
+        </div>
+
+        <p class="auth-bottom">
+            After scanning the QR code, continue to verification.
+        </p>
+
+        <a
+            href="{{ url_for('two_factor.verify_2fa') }}"
+            class="auth-button"
+        >
+            Continue to Verification →
+        </a>
+    </div>
+</div>
+
+
+</div>
+
+{% endblock %}

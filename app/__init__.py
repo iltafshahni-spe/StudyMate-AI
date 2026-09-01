@@ -18,6 +18,9 @@ def create_app():
     from app.routes.ai import ai_bp
     from app.routes.dashboard import dashboard_bp
     from app.routes.question import question_bp
+    from app.routes.two_factor import two_factor_bp
+
+    app.register_blueprint(two_factor_bp)
 
     app.register_blueprint(auth_bp)
     app.register_blueprint(ai_bp)

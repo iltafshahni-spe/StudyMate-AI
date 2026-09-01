@@ -11,6 +11,16 @@ class User(db.Model):
     
     password = db.Column(db.String(200),nullable=False)
 
+    totp_secret = db.Column(db.String(32), nullable=True)
+
+    two_factor_enabled = db.Column(db.Boolean, default=False ,nullable = False)
+    
+ 
+
+
+    
+
+
 
 class Chat(db.Model):
 

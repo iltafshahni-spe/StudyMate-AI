@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}
+Verify 2FA - StudyMate AI
+{% endblock %}
+
+{% block content %}
+
+<div class="auth-page">
+    <div class="auth-card two-factor-card">
+
+    <div class="auth-form-side">
+
+        <span class="auth-label">SECURITY VERIFICATION</span>
+
+        <div class="two-factor-icon">
+            🔐
+        </div>
+
+        <h1>Verify Your Account</h1>
+
+        <p class="two-factor-text">
+            Open your authenticator app and enter the
+            6-digit verification code.
+        </p>
+
+        <form
+            method="POST"
+            action="{{ url_for('two_factor.verify_2fa') }}"
+            class="two-factor-form"
+        >
+
+            <div class="form-group">
+                <label for="code">
+                    Authentication Code
+                </label>
+
+                <input
+                    type="text"
+                    id="code"
+                    name="code"
+                    class="otp-input"
+                    placeholder="000000"
+                    maxlength="6"
+                    minlength="6"
+                    inputmode="numeric"
+                    autocomplete="one-time-code"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="auth-button">
+                Verify Code →
+            </button>
+
+        </form>
+
+        <div class="security-note">
+            <span>🛡️</span>
+            <p>
+                Your verification code changes regularly.
+                Enter the current code shown in your authenticator app.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+
+{% endblock %}

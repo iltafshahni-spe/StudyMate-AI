@@ -1,10 +1,11 @@
 python-dotenv
-mistralai
-uvicorn
-langchain-mistralai
-langchain
 Flask
 Flask-SQLAlchemy
 Flask-Login
 Werkzeug
 mysql-connector-python
+pyotp
+qrcode[pil]
+mistralai
+langchain
+langchain-mistralai
