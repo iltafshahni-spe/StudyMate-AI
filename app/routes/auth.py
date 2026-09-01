@@ -23,7 +23,7 @@ def home():
 
     return redirect(url_for("dashboard.dashboard"))
 
-#Register 
+#Register  Login 
 
 @auth_bp.route("/register" ,methods = ["GET" , "POST"])
 def register():
