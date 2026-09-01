@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard - StudyMate AI
+{% endblock %}
+
+{% block content %}
+
+<div class="dashboard-page">
+
+
+<section class="dashboard-header">
+
+    <div class="dashboard-welcome">
+
+        <span class="eyebrow">
+            STUDYMATE AI
+        </span>
+
+        <h1>
+            Welcome back 👋
+        </h1>
+
+        <p>
+            Your AI-powered learning space.
+            Ask questions, understand concepts and learn smarter.
+        </p>
+
+    </div>
+
+    <div class="dashboard-sticker">
+        🎓
+    </div>
+
+</section>
+
+
+<section class="learning-banner">
+
+    <div class="banner-icon">
+        ✨
+    </div>
+
+    <div>
+
+        <span class="banner-label">
+            AI STUDY ASSISTANT
+        </span>
+
+        <h3>
+            Ready to learn something new?
+        </h3>
+
+        <p>
+            Ask your AI study assistant anything and get
+            clear explanations instantly.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="section-heading">
+
+    <span class="eyebrow">
+        EXPLORE
+    </span>
+
+    <h2>
+        What do you want to study today?
+    </h2>
+
+</section>
+
+
+<section class="dashboard-cards">
+
+    <a href="{{ url_for('ai.chat') }}"
+       class="dashboard-card">
+
+        <div class="card-top">
+
+            <div class="card-icon">
+                🤖
+            </div>
+
+            <div class="card-badge">
+                AI
+            </div>
+
+        </div>
+
+        <h3>
+            AI Study Chat
+        </h3>
+
+        <p>
+            Ask questions about Python, SQL, Mathematics,
+            Machine Learning or any topic you are studying.
+        </p>
+
+        <strong>
+            Open AI Chat →
+        </strong>
+
+    </a>
+
+</section>
+
+
+<section class="progress-section">
+
+    <div class="progress-title">
+
+        <div>
+
+            <span class="eyebrow">
+                YOUR LEARNING
+            </span>
+
+            <h2>
+                Keep learning 🚀
+            </h2>
+
+        </div>
+
+        <div class="progress-sticker">
+            📚
+        </div>
+
+    </div>
+
+
+    <div class="progress-card">
+
+        <div class="progress-icon">
+            🤖
+        </div>
+
+        <div>
+
+            <small>
+                AI STUDY ASSISTANT
+            </small>
+
+            <strong>
+                Learn something new every day
+            </strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+</div>
+
+{% endblock %}

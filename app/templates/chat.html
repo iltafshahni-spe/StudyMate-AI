@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block title %}
+AI Chat - StudyMate AI
+{% endblock %}
+
+{% block content %}
+
+<div class="chat-page">
+
+<div class="chat-header">
+    <span>AI STUDY ASSISTANT</span>
+
+    <h1>AI Study Chat</h1>
+
+    <p>
+        Ask StudyMate AI anything about your studies.
+    </p>
+</div>
+
+
+<div class="chat-box">
+
+    <form method="POST"
+          action="{{ url_for('ai.chat') }}">
+
+        <label for="question">
+            Your Question
+        </label>
+
+        <textarea
+            id="question"
+            name="question"
+            rows="5"
+            placeholder="Ask your study question..."
+            required
+        ></textarea>
+
+        <button type="submit">
+            Ask AI →
+        </button>
+
+    </form>
+
+</div>
+
+
+{% if answer %}
+
+<div class="ai-answer">
+
+    <div class="answer-header">
+
+        <div class="answer-icon">
+            🤖
+        </div>
+
+        <div>
+            <span>STUDYMATE AI</span>
+            <h2>AI Answer</h2>
+        </div>
+
+    </div>
+
+    <div class="answer-content">
+        {{ answer }}
+    </div>
+
+</div>
+
+{% endif %}
+
+
+{% if chats %}
+
+<div class="chat-history">
+
+    <div class="history-heading">
+
+        <span>YOUR LEARNING</span>
+
+        <h2>Chat History</h2>
+
+    </div>
+
+
+    {% for chat in chats %}
+
+    <div class="history-card">
+
+        <div class="question-box">
+
+            <div class="history-icon">
+                💬
+            </div>
+
+            <div>
+
+                <small>
+                    Your Question
+                </small>
+
+                <p>
+                    {{ chat.question }}
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="answer-box">
+
+            <div class="history-icon">
+                🤖
+            </div>
+
+            <div>
+
+                <small>
+                    AI Answer
+                </small>
+
+                <p>
+                    {{ chat.answer }}
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+{% endif %}
+
+
+</div>
+
+{% endblock %}

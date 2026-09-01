@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block title %}
+Login - StudyMate AI
+{% endblock %}
+
+{% block content %}
+
+<div class="auth-page">
+
+
+<div class="auth-card">
+
+    <div class="auth-form-side">
+
+        <span class="auth-label">
+            WELCOME BACK
+        </span>
+
+        <h1>
+            Login to StudyMate AI
+        </h1>
+
+        <p class="auth-description">
+            Continue your learning journey with your AI study assistant.
+        </p>
+
+        <form method="POST"
+              action="{{ url_for('auth.login') }}">
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    autocomplete="email"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    autocomplete="current-password"
+                    required
+                >
+
+            </div>
+
+
+            <button type="submit" class="auth-button">
+                Login to Account
+                <span>→</span>
+            </button>
+
+        </form>
+
+
+        <p class="auth-bottom">
+
+            Don't have an account?
+
+            <a href="{{ url_for('auth.register') }}">
+                Create Account
+            </a>
+
+        </p>
+
+    </div>
+
+
+    <div class="auth-image login-image">
+
+        <div class="auth-image-overlay">
+
+            <div class="auth-illustration">
+                🤖
+            </div>
+
+            <span>
+                AI STUDY ASSISTANT
+            </span>
+
+            <h2>
+                Learn smarter.<br>
+                Understand better.
+            </h2>
+
+            <p>
+                Ask questions, understand difficult concepts
+                and learn with your personal AI assistant.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+
+{% endblock %}
