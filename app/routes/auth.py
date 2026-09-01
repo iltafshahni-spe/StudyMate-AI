@@ -84,7 +84,7 @@ def logout():
     session.pop("id", None)
 
     return redirect(url_for("auth.login"))
-    flash(f"Logout User 👨🏼‍🎓")
+    
    
 
 

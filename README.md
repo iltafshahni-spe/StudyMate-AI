@@ -32,7 +32,7 @@ It helps students study more effectively by allowing them to ask questions and r
 
 ## Project Structure
 
-```text
+
 StudyMate AI/
 │
 ├── app/
@@ -65,7 +65,6 @@ StudyMate AI/
 ├── requirements.txt
 ├── run.py
 └── README.md
-```
 
 ## How It Works
 
@@ -78,81 +77,7 @@ StudyMate AI/
 7. The AI generates an explanation.
 8. Previous questions and answers can be viewed in the chat history.
 
-## Installation
 
-Clone the repository:
-
-```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-cd "StudyMate AI project"
-```
-
-Create a virtual environment:
-
-```bash
-python -m venv venv
-```
-
-Activate it on Windows:
-
-```bash
-venv\Scripts\activate
-```
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-## Environment Variables
-
-Create a `.env` file in the project root:
-
-```env
-MISTRAL_API_KEY=your_mistral_api_key
-```
-
-Do not upload your real API key to GitHub.
-
-Make sure `.env` is included in `.gitignore`:
-
-```text
-.env
-venv/
-__pycache__/
-*.pyc
-```
-
-## Run the Project
-
-Start the Flask application:
-
-```bash
-python run.py
-```
-
-Then open the local address shown by Flask in your browser.
-
-## Screenshots
-
-Screenshots of the project interface can be added here.
-
-### Login Page
-
-![StudyMate AI Login](screenshots/login.png)
-
-### Register Page
-
-![StudyMate AI Register](screenshots/register.png)
-
-### Dashboard
-
-![StudyMate AI Dashboard](screenshots/dashboard.png)
-
-### AI Study Chat
-
-![StudyMate AI Chat](screenshots/ai-chat.png)
 
 ## Future Improvements
 
